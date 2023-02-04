@@ -14,6 +14,14 @@ resource "aws_s3_bucket" "cv_bucket" {
   }
 }
 
+resource "aws_s3_bucket_versioning" "cv_bucket" {
+  bucket = aws_s3_bucket.cv_bucket.id
+  versioning_configuration {
+    status = "Enabled"
+  }
+
+}
+
 #s3 policy
 resource "aws_s3_bucket_policy" "public_read_access" {
   bucket = aws_s3_bucket.cv_bucket.id
@@ -26,7 +34,7 @@ resource "aws_s3_bucket_policy" "public_read_access" {
       "Sid": "PublicReadGetObject",
       "Effect": "Allow",
 	  "Principal": "*",
-      "Action": [ "s3:*" ],
+      "Action": [ "s3:GetObject" ],
       "Resource": [
         "${aws_s3_bucket.cv_bucket.arn}",
         "${aws_s3_bucket.cv_bucket.arn}/*"
