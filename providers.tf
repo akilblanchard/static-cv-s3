@@ -14,3 +14,9 @@ provider "aws" {
   shared_credentials_file = "/Users/killy/.aws/credentials"
   profile                 = "ablanchard"
 }
+
+provider "aws" {
+  alias  = "acm_provider"
+  region = "us-east-1"
+
+}
