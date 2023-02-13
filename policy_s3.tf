@@ -11,13 +11,13 @@ resource "aws_s3_bucket_policy" "public_read_access" {
       "Sid": "PublicReadGetObject",
       "Effect": "Allow",
 	    "Principal": "*",
-      "Action": [ "s3:GetObject" ],
+      "Action": [ "s3:GetObject","s3:PutObject" ],
       "Resource": [
-        "${aws_s3_bucket.www_bucket.arn}",
-        "${aws_s3_bucket.www_bucket.arn}/*"
-      ]
+        arn:aws:s3:::${aws_s3_bucket.www_bucket.arn},
+        arn:aws:s3:::${aws_s3_bucket.root_bucket.arn}/*
+        ]
+  
     }
   ]
-}
 POLICY
 }
