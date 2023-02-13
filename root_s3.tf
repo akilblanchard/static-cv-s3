@@ -8,4 +8,3 @@ resource "aws_s3_bucket" "root_bucket" {
     redirect_all_requests_to = "https://www.{var.domain_name}"
   }
 }
-
