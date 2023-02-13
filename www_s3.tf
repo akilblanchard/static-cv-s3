@@ -1,6 +1,6 @@
 #cv_bucket
 resource "aws_s3_bucket" "www_bucket" {
-  bucket = "www.{var.bucket_name}"
+  bucket = var.bucket_name_www
   acl    = "public-read"
   website {
     index_document = "index.html"
@@ -19,7 +19,6 @@ resource "aws_s3_bucket_versioning" "www_bucket" {
 
 }
 
-
 #StaticWebsiteFiles
 resource "aws_s3_bucket_object" "html" {
   source = "~/repos/static-cv-s3-terraform/index.html"
@@ -36,5 +35,3 @@ resource "aws_s3_bucket_object" "css" {
   key          = "cv_style_css"
   content_type = "text/css"
 }
-
-
