@@ -5,8 +5,14 @@ variable "domain_name" {
 
 variable "bucket_name" {
   type        = string
-  description = "The name of the bucket without the wwwi. prefix"
+  description = "The name of the bucket without the www. prefix"
 }
+
+variable "bucket_name_www" {
+  type        = string
+  description = "The name of the bucket with the www. prefix"
+}
+
 
 variable "common_tags" {
   description = "Common tags if you want applied to all compents"
