@@ -1,0 +1,19 @@
+Error:
+aws_s3_bucket_policy.public_read_access["www.akilblanchard.com"]: Creating...
+aws_s3_bucket_policy.public_read_access["akilblanchard.com"]: Modifying... [id=akilblanchard.com]
+aws_s3_bucket_policy.public_read_access["www.akilblanchard.com"]: Still creating... [10s elapsed]
+aws_s3_bucket_policy.public_read_access["akilblanchard.com"]: Still modifying... [id=akilblanchard.com, 10s elapsed]
+aws_s3_bucket_policy.public_read_access["akilblanchard.com"]: Still modifying... [id=akilblanchard.com, 20s elapsed]
+aws_s3_bucket_policy.public_read_access["www.akilblanchard.com"]: Still creating... [20s elapsed]
+aws_s3_bucket_policy.public_read_access["www.akilblanchard.com"]: Still creating... [30s elapsed]
+aws_s3_bucket_policy.public_read_access["akilblanchard.com"]: Still modifying... [id=akilblanchard.com, 30s elapsed]
+aws_s3_bucket_policy.public_read_access["akilblanchard.com"]: Still modifying... [id=akilblanchard.com, 40s elapsed]
+aws_s3_bucket_policy.public_read_access["www.akilblanchard.com"]: Still creating... [40s elapsed]
+aws_s3_bucket_policy.public_read_access["www.akilblanchard.com"]: Still creating... [50s elapsed]
+aws_s3_bucket_policy.public_read_access["akilblanchard.com"]: Still modifying... [id=akilblanchard.com, 50s elapsed]
+aws_s3_bucket_policy.public_read_access["akilblanchard.com"]: Still modifying... [id=akilblanchard.com, 1m0s elapsed]
+aws_s3_bucket_policy.public_read_access["www.akilblanchard.com"]: Still creating... [1m0s 
+
+
+Once done final output is:
+
