@@ -17,3 +17,18 @@ aws_s3_bucket_policy.public_read_access["www.akilblanchard.com"]: Still creating
 
 Once done final output is:
 
+Error: Error putting S3 policy: MalformedPolicy: Policy has invalid resource
+│       status code: 400, request id: E6N6PQ344F7NMQDX, host id: HZnEZFUp27AALG3n/yao0X+5yOzsugJQgHAT5a8Oq8I7zF3BZnSyTnLOkCrY0BkqAFpazCwTSLc=
+│ 
+│   with aws_s3_bucket_policy.public_read_access["www.akilblanchard.com"],
+│   on policy_s3.tf line 2, in resource "aws_s3_bucket_policy" "public_read_access":
+│    2: resource "aws_s3_bucket_policy" "public_read_access" {
+│ 
+╵
+╷
+│ Error: Error putting S3 policy: MalformedPolicy: Policy has invalid resource
+│       status code: 400, request id: E6N41VHRHCDHW0MT, host id: 1VX7ZvDWkJSnO0+cig1LgVUJYJYT6hTLn+A7j07X0TQwx2TfGQXnfymJK4cf5L4HPt2EeLRTn+w=
+│ 
+│   with aws_s3_bucket_policy.public_read_access["akilblanchard.com"],
+│   on policy_s3.tf line 2, in resource "aws_s3_bucket_policy" "public_read_access":
+│    2: resource "aws_s3_bucket_policy" "public_read_access" {
