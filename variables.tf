@@ -21,5 +21,5 @@ variable "common_tags" {
 
 variable "buckets" {
   type    = list(string)
-  default = ["www_bucket", "root_bucket"]
+  default = ["akilblanchard.com", "www.akilblanchard.com"]
 }
