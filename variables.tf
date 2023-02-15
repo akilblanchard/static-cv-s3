@@ -5,12 +5,7 @@ variable "domain_name" {
 
 variable "bucket_name" {
   type        = string
-  description = "The name of the bucket without the www. prefix"
-}
-
-variable "bucket_name_www" {
-  type        = string
-  description = "The name of the bucket with the www. prefix"
+  description = "The name of the bucket without the www. prefix. Normally domain_name."
 }
 
 
