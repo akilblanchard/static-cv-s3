@@ -1,4 +1,4 @@
-resource "aws_acm_certificate" "cert" {
+resource "aws_acm_certificate" "certs" {
   domain_name       = var.domain_name
   validation_method = "DNS"
   lifecycle {
@@ -10,9 +10,9 @@ resource "aws_acm_certificate" "cert" {
 
 
 #create a record set in route 53 for domain validation
-resource "aws_route53_record" "cert_validation" {
+resource "aws_route53_record" "certs_validation" {
   for_each = {
-    for dvo in aws_acm_certificate.cert.domain_validation_options : dvo.domain_name => {
+    for dvo in aws_acm_certificate.certs.domain_validation_options : dvo.domain_name => {
       name = dvo.resource_record_name
       record = dvo.resource_record_value
       type = dvo.resource_record_type
@@ -28,8 +28,8 @@ resource "aws_route53_record" "cert_validation" {
 }
 
 #validate cert
-resource "aws_acm_certificate_validation" "acm_cert_validation" {
-  certificate_arn = aws_acm_certificate.cert.arn
-  validation_record_fqdns = [ for record in aws_route53_record.cert_validation : record.fqdn]
+resource "aws_acm_certificate_validation" "acm_certs_validation" {
+  certificate_arn = aws_acm_certificate.certs.arn
+  validation_record_fqdns = [ for record in aws_route53_record.certs_validation : record.fqdn]
   
 }
