@@ -25,7 +25,7 @@ resource "aws_s3_bucket_object" "html" {
   source = "~/repos/static-cv-s3-terraform/index.html"
 
   bucket       = aws_s3_bucket.website_bucket.bucket
-  key          = "cv_index_html"
+  key          = "index.html"
   content_type = "text/html"
 }
 
@@ -33,6 +33,6 @@ resource "aws_s3_bucket_object" "css" {
   source = "~/repos/static-cv-s3-terraform/style.css"
 
   bucket       = aws_s3_bucket.website_bucket.bucket
-  key          = "cv_style_css"
+  key          = "style.css"
   content_type = "text/css"
 }
