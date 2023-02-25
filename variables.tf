@@ -13,8 +13,3 @@ variable "common_tags" {
   description = "Common tags if you want applied to all compents"
 
 }
-
-variable "buckets" {
-  type    = list(string)
-  default = ["akilblanchard.com", "www.akilblanchard.com"]
-}
