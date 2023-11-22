@@ -1,4 +1,4 @@
-#aws-static-site-terraform
+# aws-static-site-terraform
 
 A proof of concept of deploying a static website in in aws via Terraform.
 
